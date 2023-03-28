@@ -514,12 +514,21 @@ else (WT_ASIO_IS_STANDALONE_ASIO)
     PUBLIC ${BOOST_WT_LIBRARIES})
 endif (WT_ASIO_IS_STANDALONE_ASIO)
 
+set (BOOST_MIN_VERSION "1.64.0")
+find_package(boost_system ${BOOST_MIN_VERSION} REQUIRED)
+find_package(boost_filesystem  ${BOOST_MIN_VERSION} REQUIRED)
+find_package(boost_thread  ${BOOST_MIN_VERSION} REQUIRED)
+find_package(boost_program_options  ${BOOST_MIN_VERSION} REQUIRED)
+find_package(boostorg_ublas REQUIRED)
+
 TARGET_LINK_LIBRARIES(wt
   PUBLIC
     ${WT_SOCKET_LIBRARY}
   PRIVATE
     ${WT_MATH_LIBRARY}
     ${RT_LIBRARY}
+    ${BOOST_WT_LIBRARIES}
+    boostorg_ublas::ublas
     )
 
 IF(ENABLE_LIBWTTEST)
