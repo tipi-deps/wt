@@ -1,16 +1,9 @@
 {
   "u": true,  
-  "boostorg/ublas": {
-      "@": "boost-1.80.0",
-      "x": [ "IDEs/", "benchmarks/", "examples/", "test/" ],
-      "s": [ "include/" ],
-      "requires":  { 
-          "boostorg/boost": {
-            "@": "boost-1.80.0",
-            "u": true,
-            "packages" : [ "boost_system" ], "targets" : [ "Boost::system" ],
-            "opts": "set(BOOST_INCLUDE_LIBRARIES system filesystem thread chrono locale serialization program_options)\nset(CMAKE_DEBUG_POSTFIX \"\")"
-          }
-      }
-  }    
+  "boostorg/boost": {
+    "@": "boost-1.80.0",
+    "u": true,
+    "packages" : [ "boost_system" ], "targets" : [ "Boost::system" ],
+    "opts": "set(BOOST_INCLUDE_LIBRARIES system filesystem thread chrono locale serialization program_options)\nset(CMAKE_DEBUG_POSTFIX \"\")"
+  }
 }

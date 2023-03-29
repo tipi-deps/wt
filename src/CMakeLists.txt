@@ -169,7 +169,7 @@ Wt/WLoadingIndicator.h Wt/WLoadingIndicator.C
 Wt/WLocalizedStrings.h Wt/WLocalizedStrings.C
 Wt/WLogger.h Wt/WLogger.C
 Wt/WLogSink.h Wt/WLogSink.C
-Wt/WMatrix4x4.h Wt/WMatrix4x4.C
+#Wt/WMatrix4x4.h Wt/WMatrix4x4.C
 Wt/WMeasurePaintDevice.h Wt/WMeasurePaintDevice.C
 Wt/WMediaPlayer.h Wt/WMediaPlayer.C
 Wt/WMemoryResource.h Wt/WMemoryResource.C
@@ -519,7 +519,7 @@ find_package(boost_system ${BOOST_MIN_VERSION} REQUIRED)
 find_package(boost_filesystem  ${BOOST_MIN_VERSION} REQUIRED)
 find_package(boost_thread  ${BOOST_MIN_VERSION} REQUIRED)
 find_package(boost_program_options  ${BOOST_MIN_VERSION} REQUIRED)
-find_package(boostorg_ublas REQUIRED)
+#find_package(boostorg_ublas REQUIRED)
 
 TARGET_LINK_LIBRARIES(wt
   PUBLIC
@@ -528,7 +528,7 @@ TARGET_LINK_LIBRARIES(wt
     ${WT_MATH_LIBRARY}
     ${RT_LIBRARY}
     ${BOOST_WT_LIBRARIES}
-    boostorg_ublas::ublas
+#    boostorg_ublas::ublas
     )
 
 IF(ENABLE_LIBWTTEST)
