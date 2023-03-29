@@ -169,7 +169,7 @@ Wt/WLoadingIndicator.h Wt/WLoadingIndicator.C
 Wt/WLocalizedStrings.h Wt/WLocalizedStrings.C
 Wt/WLogger.h Wt/WLogger.C
 Wt/WLogSink.h Wt/WLogSink.C
-#Wt/WMatrix4x4.h Wt/WMatrix4x4.C
+Wt/WMatrix4x4.h Wt/WMatrix4x4.C
 Wt/WMeasurePaintDevice.h Wt/WMeasurePaintDevice.C
 Wt/WMediaPlayer.h Wt/WMediaPlayer.C
 Wt/WMemoryResource.h Wt/WMemoryResource.C
@@ -501,6 +501,7 @@ IF(WIN32)
 ENDIF(WIN32)
 
 ADD_LIBRARY(wt ${libsources})
+INCLUDE_DIRECTORIES(wt ${CMAKE_CURRENT_LIST_DIR}/3rdparty/ublas/include)
 
 SET_PROPERTY(TARGET wt PROPERTY C_VISIBILITY_PRESET hidden)
 SET_PROPERTY(TARGET wt PROPERTY CXX_VISIBILITY_PRESET hidden)
