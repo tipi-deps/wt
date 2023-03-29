@@ -1,30 +1,16 @@
 {
-    "u": true,  
-    "boostorg/ublas": {
-        "@": "boost-1.80.0",
-        "x": [ "IDEs/", "benchmarks/", "examples/", "test/" ],
-        "s": [ "include/" ],
-        "requires":  { 
-            "boostorg/boost": {
-                "@": "boost-1.80.0",
-                "u": true,
-                "packages" : [
-                    "boost_system", 
-                    "boost_filesystem", 
-                    "boost_program_options"
-                  ],
-                  "targets" : [
-                    "Boost::system", 
-                    "Boost::filesystem", 
-                    "Boost::program_options"
-                  ],
-                "opts": "set(BOOST_INCLUDE_LIBRARIES system filesystem thread chrono locale serialization program_options)\nset(CMAKE_DEBUG_POSTFIX \"\")"
-            }
-        }
-    },    
-    "boostorg/boost": {
-        "@": "boost-1.80.0",
-        "u": true,
-        "opts": "set(BOOST_INCLUDE_LIBRARIES system filesystem thread chrono locale serialization program_options)\nset(CMAKE_DEBUG_POSTFIX \"\")"
-    }
+  "u": true,  
+  "boostorg/ublas": {
+      "@": "boost-1.80.0",
+      "x": [ "IDEs/", "benchmarks/", "examples/", "test/" ],
+      "s": [ "include/" ],
+      "requires":  { 
+          "boostorg/boost": {
+            "@": "boost-1.80.0",
+            "u": true,
+            "packages" : [ "boost_system" ], "targets" : [ "Boost::system" ],
+            "opts": "set(BOOST_INCLUDE_LIBRARIES system filesystem thread chrono locale serialization program_options)\nset(CMAKE_DEBUG_POSTFIX \"\")"
+          }
+      }
+  }    
 }
